@@ -38,3 +38,17 @@ export function setGreeting(message: string): void {
 
   storage.set(account_id, message)
 }
+export const messages = new PersistentVector<Message>("psms");
+export class StaticsInfo {
+  messageNum: i32;
+  sentAccountNum: i32;
+  inboxAccountNum: i32;
+  accountNum: i32;
+
+  constructor() {
+      this.messageNum = 0;
+      this.sentAccountNum = 0;
+      this.inboxAccountNum = 0;
+      this.accountNum = 0;
+  }
+}
